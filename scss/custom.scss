@@ -1,0 +1,7 @@
+$primaryC:#f0efeb;
+$secondaryC:rgba(black, 0.8);
+$theme-colors: (
+  primary:$primaryC,
+  secondary:$secondaryC
+);
+@import "../node_modules/bootstrap/scss/bootstrap";

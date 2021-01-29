@@ -1,0 +1,118 @@
+.nav-bar-container{
+     position: absolute;
+     z-index: 1000;
+}
+.intro-body{
+     height: 100vh;
+     background: linear-gradient(
+          to bottom,rgba(6, 23, 34, 0.8),rgba(6, 13, 34, 0.8)),url(../img/intro-bg-2.png
+  );
+  background-repeat: no-repeat;
+  background-position:left;
+  background-size: cover;
+  position: relative;
+  z-index: 200;
+  background-attachment: fixed;
+
+}
+.border-radius{
+     border-radius: 30px;
+     -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+     -ms-border-radius: 30px;
+     -o-border-radius: 30px;
+     padding: 2px 30px;
+}
+.traingle-container{
+     width:100%;
+     height:100%;
+     position: absolute;
+     top: 0;
+     right:0;
+     background-image: url('../img/triangle.svg');
+     background-size: 60%;
+     background-repeat: no-repeat;
+     background-position: right bottom;
+     z-index: -1;
+}
+/* footer */
+.footer-content i{
+     font-size: 20px;
+}
+.inno-footer a{
+     color: var(--dark);
+}
+/* end footer */
+.nav-button{
+     color:#000000 !important;
+}
+
+@media screen and (max-width:567.9px){
+     .side-bar-show:focus{
+          outline: none;
+     }
+     .show-icon{
+          transition: 0.3s;
+     }
+     .side-bar-show:focus .show-icon{
+          color:var(--dark) !important;
+
+     }
+     .side-nav-bar{
+          transition:1s     ;
+          -webkit-transition:1s     ;
+          -moz-transition:1s     ;
+          -ms-transition:1s     ;
+          -o-transition:1s     ;
+}
+     .side-nav-bar{
+          width: 100%;
+          height:100vh;
+          position: fixed;
+          background-color: var(--white);
+          z-index: 3000;
+          margin-left: -100%;
+     }
+     .side-nav-bar.active{
+          margin-left:0;
+     }
+     .side-nav-hide:focus{
+          outline: none !important;
+          box-shadow: unset !important;
+          border: none !important;
+     }
+     .side-nav-hide:focus .hide-icon{
+          transform: scale(0.3);
+          color: #0000004d !important;
+          transition: 0.2s;
+     }
+     .mobile-nav{
+          padding: 0;
+          list-style-type: none;
+     }
+     .mobile-nav .nav-item{
+          padding: 10px 10px;
+          margin: 10px 0;
+
+     }
+     .mobile-nav a{
+          color: var(--dark) !important;
+     }
+     /*.mobile-nav .nav-link{*/
+     /*     color:var(--dark) !important;*/
+     /*     margin: 10px 0 !important;*/
+     /*}*/
+
+}
+@media screen and (max-width:768.9px){
+     .nav-bar-container{
+       background-color:#0000004d;
+     }
+     .nav-item{
+          margin: 0 !important;
+
+     }
+     .intro-body{
+     
+     }
+}
