@@ -15,8 +15,7 @@ $(document).ready(function(){
         $("#footer").load('components/footer.html')
     })
     $('#header').on('click',function (event) {
-      let current =  $(event.target);
-      console.log(current);
+      const current =  $(event.target);
         if(current.hasClass('show-icon')){
             $('.side-nav-bar').addClass('active');
             addMobileNav();

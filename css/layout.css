@@ -11,7 +11,6 @@ body{
 .nav-bar-container{
      position: fixed;
      z-index: 1000;
-     background-color:var(--blacktransparent) !important;
 }
 .intro-body{
      height: 100vh;
@@ -58,6 +57,18 @@ body{
      color:#000000 !important;
 }
 
+/*carrier start*/
+.carrier-container{
+     background: linear-gradient(
+             to bottom,rgba(6, 23, 34, 0.8),rgba(6, 13, 34, 0.8)),url(../img/career/carrer.jpg
+     );
+     background-repeat: no-repeat;
+     background-position:center;
+     background-size: cover;
+}
+
+/*carrier end*/
+
 @media screen and (max-width:567.9px){
      .side-bar-show:focus{
           outline: none;
@@ -65,7 +76,7 @@ body{
      .show-icon{
           transition: 0.3s;
      }
-     .side-bar-show:focus .show-icon{
+     .side-bar-show:active .show-icon{
           color:var(--dark) !important;
 
      }
@@ -108,10 +119,12 @@ body{
      .mobile-nav a{
           color: var(--dark) !important;
      }
-     /*.mobile-nav .nav-link{*/
-     /*     color:var(--dark) !important;*/
-     /*     margin: 10px 0 !important;*/
-     /*}*/
+     .carrier-bg-row{
+          height: 70vh !important;
+     }
+     .carrier-header{
+          font-size: 30px;
+     }
 
 }
 @media screen and (max-width:768.9px){

@@ -1,7 +1,9 @@
 $primaryC:#f0efeb;
-$secondaryC:rgba(black, 0.8);
+$infoC:#rgb(25, 35, 44);
+$secondaryC:#050914;
 $theme-colors: (
   primary:$primaryC,
-  secondary:$secondaryC
+  secondary:$secondaryC,
+
 );
 @import "../node_modules/bootstrap/scss/bootstrap";
