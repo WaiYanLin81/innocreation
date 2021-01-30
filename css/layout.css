@@ -9,7 +9,7 @@ body{
      overflow-x: hidden;
 }
 .nav-bar-container{
-     position: absolute;
+     position: fixed;
      z-index: 1000;
      background-color:var(--blacktransparent) !important;
 }

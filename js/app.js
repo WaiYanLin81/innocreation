@@ -8,13 +8,13 @@ $(document).ready(function(){
     //     $('.side-nav-bar').removeClass('active');
     //
     // });
-    // function addMobileNav(x=null) {
-    //     $('.side-nav-bar').css({
-    //         transition:"0.8s",
-    //     })
-    //     let requestNavIem = $('.navbar-nav').html();
-    //     $('.mobile-nav').html(requestNavIem);
-    // };
+    function addMobileNav(x=null) {
+        $('.side-nav-bar').css({
+            transition:"0.8s",
+        })
+        let requestNavIem = $('.navbar-nav').html();
+        $('.mobile-nav').html(requestNavIem);
+    };
     $(function () {
         $("#header").load('header.html');
     });
@@ -26,6 +26,15 @@ $(document).ready(function(){
             addMobileNav();
         }else if(current.hasClass('hide-icon')){
             $('.side-nav-bar').removeClass('active');
+        }
+    });
+    $(window).scroll(function () {
+        const currentScroll = $(this).scrollTop();
+        const screenHeight = $(window).height();
+        if(currentScroll >= screenHeight -80){
+            $('.nav-bar-container').fadeIn(500);
+        }else {
+            $('.nav-bar-container').fadeOut(500);
         }
     })
 });
