@@ -8,16 +8,12 @@ $(document).ready(function(){
     //     $('.side-nav-bar').removeClass('active');
     //
     // });
-    function addMobileNav(x=null) {
-        $('.side-nav-bar').css({
-            transition:"0.8s",
-        })
-        let requestNavIem = $('.navbar-nav').html();
-        $('.mobile-nav').html(requestNavIem);
-    };
     $(function () {
-        $("#header").load('header.html');
+        $("#header").load('components/header.html');
     });
+    $(function () {
+        $("#footer").load('components/footer.html')
+    })
     $('#header').on('click',function (event) {
       let current =  $(event.target);
       console.log(current);
@@ -32,10 +28,22 @@ $(document).ready(function(){
         const currentScroll = $(this).scrollTop();
         const screenHeight = $(window).height();
         if(currentScroll >= screenHeight -80){
-            $('.nav-bar-container').fadeIn(500);
+            fadeIn();
+        }else if(currentScroll === 0){
+            fadeIn();
         }else {
             $('.nav-bar-container').fadeOut(500);
         }
-    })
+    });
+    function fadeIn() {
+        $('.nav-bar-container').fadeIn(500);
+    };
+    function addMobileNav(x=null) {
+        $('.side-nav-bar').css({
+            transition:"0.8s",
+        })
+        let requestNavIem = $('.navbar-nav').html();
+        $('.mobile-nav').html(requestNavIem);
+    };
 });
 
