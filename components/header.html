@@ -23,21 +23,37 @@
         <div class="collapse navbar-collapse   justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item mx-4">
-                    <a class="nav-link text-white" href="index.html">Home</a>
+                    <a class="nav-link " href="index.html">Home</a>
                 </li>
                 <li class="nav-item mx-4">
-                    <a class="nav-link text-white" href="#">IERP</a>
+                    <a class="nav-link " href="#">IERP</a>
                 </li>
                 <li class="nav-item mx-4">
-                    <a class="nav-link text-white" href="#">About US</a>
+                    <a class="nav-link " href="about.html">About US</a>
                 </li>
                 <li class="nav-item mx-4">
-                    <a class="nav-link text-white" href="careers.html">Careers</a>
+                    <a class="nav-link " href="careers.html">Careers</a>
                 </li>
-                <li class="nav-item mobile-nav-item mx-4 border-radius btn btn-light">
-                    <a class="nav-link nav-button" href="jj.html">Contact</a>
+                <li class="nav-item mobile-nav-item  mx-4 border-radius btn btn-danger">
+                    <a class="nav-link nav-button " href="jj.html">Contact</a>
                 </li>
             </ul>
         </div>
     </nav>
 </div>
+<script>
+$('.show-icon').click(function () {
+    $('.side-nav-bar').addClass('active');
+    addMobileNav();
+})
+$('.hide-icon').click(function () {
+    $('.side-nav-bar').removeClass('active');
+});
+function addMobileNav(x=null) {
+    $('.side-nav-bar').css({
+        transition:"0.8s",
+    })
+    let requestNavIem = $('.navbar-nav').html();
+    $('.mobile-nav').html(requestNavIem);
+};
+</script>
