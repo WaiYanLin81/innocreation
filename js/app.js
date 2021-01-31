@@ -1,29 +1,4 @@
 $(document).ready(function(){
-    // $('.side-bar-show').click(function(){
-    //      $('.side-nav-bar').addClass('active');
-    //     addMobileNav();
-    // });
-    //
-    // $('.side-nav-hide').click(function () {
-    //     $('.side-nav-bar').removeClass('active');
-    //
-    // });
-
-    $(function () {
-        $("#header").load('components/header.html');
-    });
-    $(function () {
-        $("#footer").load('components/footer.html')
-    })
-    // $('#header').on('click',function (event) {
-    //     const current =  $(event.target);
-    //     if(current.hasClass('show-icon')){
-    //         $('.side-nav-bar').addClass('active');
-    //         addMobileNav();
-    //     }else if(current.hasClass('hide-icon')){
-    //         $('.side-nav-bar').removeClass('active');
-    //     }
-    // });
     $(window).scroll(function () {
         const currentScroll = $(this).scrollTop();
         const screenHeight = $(window).height();
@@ -35,9 +10,25 @@ $(document).ready(function(){
         }else{
             $('.nav-bar-container').removeClass('active');
             $('.nav-bar-container').fadeOut(0);
-
         }
     });
 
+    $('.show-icon').click(function () {
+        $('.side-nav-bar').addClass('active');
+        addMobileNav();
+    })
+    $('.hide-icon').click(function () {
+        $('.side-nav-bar').removeClass('active');
+    });
+    function addMobileNav(x=null) {
+        $('.side-nav-bar').css({
+            transition:"0.8s",
+        })
+        let requestNavIem = $('.navbar-nav').html();
+        $('.mobile-nav').html(requestNavIem);
+    };
+    console.log('go')
+
 });
+
 

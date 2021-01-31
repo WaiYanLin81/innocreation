@@ -6,22 +6,29 @@
      <title>Document</title>
 </head>
 <link rel="stylesheet" href="scss/custom.css">
-<link rel="stylesheet" href="vendor/icofonts/icofont.min.css">
 <link rel="stylesheet" href="vendor/slick/slick.css">
+<link rel="stylesheet" href="vendor/icofonts/icofont.min.css">
 <link rel="stylesheet" href="css/layout.css">
 <script src="vendor/jquery/jquery.min.js"></script>
-
-<body class="">
-     <section id="header" class=""></section>
+<script>
+    $(function () {
+        $("#header").load('components/header.html');
+    });
+    $(function () {
+        $("#footer").load('components/footer.html')
+    });
+</script>
+<body>
+     <section id="header"></section>
      <section class="intro-body container-fluid p-0">
-          <div class="container">
-            <div class="row vh-100 align-items-center">
-               <div class="col-12 col-lg-6">
-                 <h1 class="text-white font-weight-bold">Innocreation</h1>
-               </div>
-            </div>
-          </div> 
-          <div class="d-none d-md-block traingle-container"></div>
+         <div class="container">
+             <div class="row vh-100 align-items-center">
+                 <div class="col-12 col-lg-6">
+                     <h1 class="text-white font-weight-bold">Innocreation</h1>
+                 </div>
+             </div>
+         </div>
+         <div class="d-none d-md-block traingle-container"></div>
      </section>
      <section class="py-5 container-fluid">
          <div class="container">
@@ -58,15 +65,13 @@
              </div>
          </div>
      </section>
-     <section id="footer">
-
-     </section>
+     <section id="footer"></section>
 
 
      <script src="vendor/slick/slick.min.js"></script>
      <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
      <script src="js/app.js"></script>
-     <script src="js/test.js"></script>
+
 
 </body>
 </html>
